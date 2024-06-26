@@ -18,7 +18,18 @@ onMounted(() => {
       opacity: 1,
       duration: .4,
       ease: "bounce.out",
-      stagger: 0.09,
+      stagger: {
+        each: 0.09,
+        from: "start",
+        onComplete: (element) => {
+          gsap.to(element(), {
+            scale: 1.9,
+            duration: 0.4,
+            ease: "bounce.out",
+            stagger: 0.09
+          });
+        }
+      }
     }
   )
 })
@@ -29,27 +40,27 @@ onMounted(() => {
     <img
       :src="imgUrl" 
       alt=""
-      class="animate-img transform w-40 h-40 rotate-12 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img image-animate w-40 h-40 rotate-12 object-cover rounded-2xl border-4 border-gray-100"
     >
     <img
       :src="imgUrl"
       alt=""
-      class="animate-img transform -rotate-12 w-40 h-40 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img image-animate -rotate-12"
     >
     <img
       :src="imgUrl"
       alt=""
-      class="animate-img transform rotate-6 w-40 h-40 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img image-animate rotate-6"
     >
     <img
       :src="imgUrl"
       alt=""
-      class="animate-img transform -rotate-12 w-40 h-40 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img image-animate -rotate-12"
     >
     <img
       :src="imgUrl"
       alt=""
-      class="animate-img transform object-cover w-40 h-40 rounded-2xl border-4 border-gray-100"
+      class="animate-img image-animate object-cover"
     >
   </div>
 </template>
