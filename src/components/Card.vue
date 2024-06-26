@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import gsap from 'gsap';
+
+const imgUrl = ref("https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq");
 
 onMounted(() => {
   const images = document.querySelectorAll('.animate-img');
@@ -9,51 +11,47 @@ onMounted(() => {
   images.forEach((image, index) => {
     tl.fromTo(image,
       { 
-        width: "0px", 
-        height: "0px", 
+        scale: 0,
         opacity: 0 
       },
       {
-        width: "10rem",
-        height: "10rem",
+        scale: 1,
         opacity: 1,
-        duration: .6,
-        ease: "power4.out"
-      }
-    );
+        duration: 0.3,
+        ease: "power4.out",
+      });
   });
 });
 </script>
 
-
 <template>
-  <main class="flex flex-wrap gap-4 -space-x-28 justify-start w-[26rem]">
+  <div class="flex flex-wrap gap-4 -space-x-32 justify-start w-[23rem] m-auto">
     <img
-      src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" 
+      :src="imgUrl" 
       alt=""
-      class="animate-img transform rotate-12 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img transform w-40 h-40 rotate-12 object-cover rounded-2xl border-4 border-gray-100"
     >
     <img
-      src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" 
+      :src="imgUrl"
       alt=""
-      class="animate-img transform -rotate-12 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img transform -rotate-12 w-40 h-40 object-cover rounded-2xl border-4 border-gray-100"
     >
     <img
-      src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" 
+      :src="imgUrl"
       alt=""
-      class="animate-img transform rotate-6 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img transform rotate-6 w-40 h-40 object-cover rounded-2xl border-4 border-gray-100"
     >
     <img
-      src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" 
+      :src="imgUrl"
       alt=""
-      class="animate-img transform -rotate-12 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img transform -rotate-12 w-40 h-40 object-cover rounded-2xl border-4 border-gray-100"
     >
     <img
-      src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" 
+      :src="imgUrl"
       alt=""
-      class="animate-img transform object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img transform object-cover w-40 h-40 rounded-2xl border-4 border-gray-100"
     >
-  </main>
+  </div>
 </template>
 
 <style>
