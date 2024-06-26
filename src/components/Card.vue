@@ -20,15 +20,15 @@ onMounted(() => {
       ease: "power4.inOut",
       stagger: {
         each: 0.09,
-        from: "start",
-        onComplete: (element) => {
-          gsap.to(element(), {
-            scale: 1.9,
-            duration: 0.4,
-            ease: "bounce.out",
-            stagger: 0.09
-          });
-        }
+        // from: "start",
+        // onComplete: (element) => {
+        //   gsap.to(element(), {
+        //     scale: 1.9,
+        //     duration: 0.4,
+        //     ease: "bounce.out",
+        //     stagger: 0.09
+        //   });
+        // }
       }
     }
   )
