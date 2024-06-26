@@ -8,24 +8,24 @@ onMounted(() => {
   const images = document.querySelectorAll('.animate-img');
   const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
-  images.forEach((image, index) => {
-    tl.fromTo(image,
-      { 
-        scale: 0,
-        opacity: 0 
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power4.out",
-      });
-  });
-});
+  tl.fromTo(images,
+    { 
+      scale: 0,
+      opacity: 0 
+    },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: .4,
+      ease: "bounce.out",
+      stagger: 0.09,
+    }
+  )
+})
 </script>
 
 <template>
-  <div class="flex flex-wrap gap-4 -space-x-32 justify-start w-[23rem] m-auto">
+  <div class="flex flex-wrap gap-4 -space-x-24 justify-start w-[32rem] m-auto">
     <img
       :src="imgUrl" 
       alt=""
