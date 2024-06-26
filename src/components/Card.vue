@@ -17,7 +17,7 @@ onMounted(() => {
       scale: 1,
       opacity: 1,
       duration: .4,
-      ease: "bounce.out",
+      ease: "power4.inOut",
       stagger: {
         each: 0.09,
         from: "start",
