@@ -17,7 +17,7 @@ onMounted(() => {
       scale: 1,
       opacity: 1,
       duration: .4,
-      ease:"elastic.out(0.5,0.5)",
+      ease:"elastic.out(0.4,0.4)",
       stagger: {
         each: 0.09,
       }
