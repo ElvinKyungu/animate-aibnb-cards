@@ -6,7 +6,7 @@ const imgUrl = ref("https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1
 
 onMounted(() => {
   const images = document.querySelectorAll('.animate-img');
-  const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: .1 });
 
   tl.fromTo(images,
     { 
@@ -16,10 +16,10 @@ onMounted(() => {
     {
       scale: 1,
       opacity: 1,
-      duration: .4,
+      duration: .9,
       ease:"elastic.out(0.4,0.4)",
       stagger: {
-        each: 0.09,
+        each: 0.06,
       }
     }
   )
