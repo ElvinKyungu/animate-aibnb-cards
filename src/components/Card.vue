@@ -17,18 +17,9 @@ onMounted(() => {
       scale: 1,
       opacity: 1,
       duration: .4,
-      ease: "power4.inOut",
+      ease:"elastic.out(0.5,0.5)",
       stagger: {
         each: 0.09,
-        // from: "start",
-        // onComplete: (element) => {
-        //   gsap.to(element(), {
-        //     scale: 1.9,
-        //     duration: 0.4,
-        //     ease: "bounce.out",
-        //     stagger: 0.09
-        //   });
-        // }
       }
     }
   )
@@ -40,7 +31,7 @@ onMounted(() => {
     <img
       :src="imgUrl" 
       alt=""
-      class="animate-img image-animate w-40 h-40 rotate-12 object-cover rounded-2xl border-4 border-gray-100"
+      class="animate-img image-animate rotate-12"
     >
     <img
       :src="imgUrl"
